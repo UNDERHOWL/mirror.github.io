@@ -1,21 +1,54 @@
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type='text/css' href="{% static 'css/style.css'%}">
-    <link rel="stylesheet" href="https://cccabinet.jpn.org/bootstrap4/css/style.css">
-    <title>mirror</title>
+  <!--時計-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--天気予報-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <title>Digital Clock</title>
+  <!-- CSSファイル読み込み -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="black" text="white">
-    <script>
-        var today=new Date(); 
+<body>
+  <div class="container">
+    <div class="clock">
+      <p class="clock-date"></p>
+      <p class="clock-time"></p>
+        <!-- javascriptで得た結果を表示する場所 -->
+      <ul id='messages'></ul>
+    </div>
+    
+  </div>
+  <!-- JavaScriptファイル読み込み -->
+  <script src="clock.js"></script>
 
-        var year = today.getFullYear();
-        var month = today.getMonth()+1;
-        var week = today.getDay();
-        var day = today.getDate();
+   <!-- 天気予報APIを参照するためのjavascript -->
+   <script src="weatherForcast.js"></script>
 
-        var week_ja= new Array("日","月","火","水","木","金","土");
+   <script src="JavaScript videoRecord.js"></script>
 
-        document.write(year+("<br>\n")+month+"/"+day+(" ")+week_ja[week]);
-    </script>
+   <div class="screen">
+    <div class="container">
+      <h2>カメラの映像</h2>
+      <video
+        class="js-video-record"
+        data-video-player=".js-video-player"
+        data-record-start=".js-record-start"
+        data-record-stop=".js-record-stop"
+        data-play-start=".js-play-start"
+        data-download=".js-download"
+      ></video>
+      <div>
+        <button class="js-record-start">録画開始</button>
+        <button class="js-record-stop">録画停止</button>
+        <button class="js-play-start">動画の再生</button>
+        <button class="js-download">動画のダウンロード</button>
+      </div>
+    </div>
+  </div>
+   
 </body>
+</html>
