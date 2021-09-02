@@ -2,13 +2,13 @@
 
 
 body {
+    background-color: #000000;
     margin: 0;
     padding: 0;
 }
 
 /* 全体を囲うコンテナー */
 .container {
-  background-color: #000000;
   display: flex;
   align-items: left;
   justify-content: left;
@@ -62,6 +62,19 @@ body {
   .clock-time {
     font-size: 20vw;
   }
+}
 
+video {
+  background:#222;
+  vertical-align: top;
+  --width: 25vw;
+  width: var(--width);
+  height: calc(var(--width) * 0.5625);
+}
 
+.recordpreview {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
