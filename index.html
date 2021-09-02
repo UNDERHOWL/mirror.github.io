@@ -11,28 +11,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>WebRTC - MediaStream Recording</title>
-  <link rel="stylesheet" href="style_test.css">
+  <title>RecordPage</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="container">
+  
+  <div class="container">
+    <div class="clock">
+      <p class="clock-date"></p>
+      <p class="clock-time"></p>
+        <!-- javascriptで得た結果を表示する場所 -->
+      <ul id='messages'></ul>
+    </div> 
+  </div> 
+  
+  <div class="recordpreview">
+    <div id="container">
 
-    <h1>WebRTC - MediaStream Recording</h1>
+      <h1>WebRTC - MediaStream Recording</h1>
 
-    <video id="local" playsinline autoplay muted></video>
-    <video id="recorded" playsinline loop></video>
+      <video id="local" playsinline autoplay muted></video>
+      <video id="recorded" playsinline loop></video>
 
-    <div>
-      <button id="start">映像を取得する</button>
-      <button id="record" disabled>録画開始</button>
-      <button id="play" disabled>再生</button>
-      <button id="download" disabled>ダウンロード</button>
+      <div>
+        <button id="start">映像を取得する</button>
+        <button id="record" disabled>録画開始</button>
+        <button id="play" disabled>再生</button>
+        <button id="download" onclick="location.href='top_page.html'" disabled>ダウンロード</button>
+      </div>
     </div>
+  </div>
 
   <!-- include adapter for srcObject shim -->
   <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
   <script src="index.js" async></script>
 
-  </div>
+    <!-- JavaScriptファイル読み込み -->
+    <script src="clock.js"></script>
+
 </body>
 </html>
