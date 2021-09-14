@@ -12,7 +12,7 @@ const localVideo = document.getElementById("local");
 const recordedVideo = document.getElementById("recorded");
 const startBtn = document.getElementById("start");
 const recordBtn = document.getElementById("record");
-const playBtn = document.getElementById("play");
+//const playBtn = document.getElementById("play");
 const downloadBtn = document.getElementById("download");
 let mediaRecorder;
 let recordedBlobs;
@@ -47,7 +47,7 @@ function startRecording() {
 
   console.log("Created MediaRecorder", mediaRecorder);
   recordBtn.textContent = "録画停止";
-  playBtn.disabled = true;
+  //playBtn.disabled = true;
   downloadBtn.disabled = true;
 
   mediaRecorder.onstop = event => {
@@ -84,12 +84,12 @@ recordBtn.addEventListener("click", () => {
   } else {
     stopRecording();
     recordBtn.textContent = "録画開始";
-    playBtn.disabled = false;
+    //playBtn.disabled = false;
     downloadBtn.disabled = false;
   }
 });
 
-playBtn.addEventListener("click", () => {
+/*playBtn.addEventListener("click", () => {
   const superBuffer = new Blob(recordedBlobs, { type: "video/webm" });
   recordedVideo.src = null;
   recordedVideo.srcObject = null;
@@ -97,6 +97,7 @@ playBtn.addEventListener("click", () => {
   recordedVideo.controls = true;
   recordedVideo.play();
 });
+*/
 
 downloadBtn.addEventListener("click", () => {
   const blob = new Blob(recordedBlobs, { type: "video/webm" });
