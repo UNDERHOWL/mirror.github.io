@@ -11,16 +11,14 @@ server.on('request', function(req, res)
     let filename = '';
 
     // URLに応じて読み込むファイル名を変える
-    if (req.url === '/style.css') {
-        res.writeHead(200, {"Content-Type": "text/css"});
-        var output = fs.readFileSync("./style.css", "utf-8");
-        res.end(output);
-    } else {
-        res.writeHead(200, {"Content-Type": "text/html"});
-        var output = fs.readFileSync("./movie_page.html", "utf-8");
-        res.end(output);
+    if (req.url == '/ccc')
+    {
+        filename = 'movie_page.html';
     }
-
+    else if (req.url == '/ddd')
+    {
+        filename = 'record_page.html';
+    }
 
     // ファイルの読み込み
     fs.readFile(__dirname + '/'+filename, 'utf-8', function(err, data)
