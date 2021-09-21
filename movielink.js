@@ -57,13 +57,23 @@ async function getSheetRequest(){
       spreadsheetId: sheet,
       range: cells
     });
-    console.log(responseGetSheet.data.values);
+    // console.log(JSON.stringify(responseGetSheet.data.values));
+    //KY --------------------------------
+    //return JSON.stringify(responseGetSheet.data.values)
+    return new Promise((resolve, reject) => {
+      // Promiseの結果を返す
+      // resolve('resolve!!');
+      resolve(JSON.stringify(responseGetSheet.data.values))
+      //resolve()メソッドで成功したときの結果を戻り値として返せる
+  });
+
   } catch (error) {
     console.log('The API returned an error: ' + error);
   }
 }
  
 // スプレッドシートを読み込む
-getSheetRequest();
+//getSheetRequest();
 
-module.exports = new Date()
+//module.exports = new Date()
+exports.getSheetRequest = getSheetRequest
