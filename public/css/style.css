@@ -1,0 +1,141 @@
+/* Google Fonts 読み込み */
+
+
+body {
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+}
+
+/* 全体を囲うコンテナー */
+.container {
+  display: flex;
+
+}
+
+/* 時計の共通スタイル */
+.clock {
+  align-items: left;
+  justify-content: left;
+  font-family: 'Share Tech Mono', monospace;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* 日付のスタイル */
+.clock-date {
+  font-size: 25px;
+}
+
+/* 時間のスタイル */
+.clock-time {
+    margin: 5px;
+  font-size: 100px;
+}
+
+#messages {
+    font-size: 25px;
+    padding-left: 0;
+}
+
+.youtube > .container {
+    padding-bottom: 200px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.button > .container {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 文字サイズ調整 */
+@media screen and (max-width: 500px) {
+  .clock-date {
+    font-size: 5vw;
+  }
+  .clock-time {
+    font-size: 20vw;
+  }
+}
+
+/*
+video {
+  background:#222;
+  vertical-align: top;
+  --width: 25vw;
+  width: var(--width);
+  height: calc(var(--width) * 0.5625);
+}
+*/
+
+.record {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.container_frame{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container_frame .videoframe {
+  height: 450px;
+  width: 800px;
+  border: solid 3px #ffffff;
+}
+
+#print {
+  display:flex;
+  justify-content: right;
+  padding-right: 250px;
+}
+
+.video {
+  display: flex;
+}
+
+#local {
+  justify-content: left;
+}
+
+.container_comment {
+  text-align: center;
+}
+
+.comment {
+  justify-content: center;
+}
+
+button {
+  /* ブラウザ特有のスタイルを無効に */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+
+  /* 整える */
+  margin: 1em 0; /* 前後の隙間 */
+  padding: 0.6em 1em; /* 塗りの余白 */
+  font-size: 1em; /* フォントサイズ */
+  background-color: #e3e3e3; /* 背景色 */
+  color: rgb(34, 34, 34); /* テキストカラー */
+  cursor: pointer; /* カーソルを指マークに */
+  border-radius: 3px; /* 角の丸み */
+  border: 0; /* 枠線を消す */
+  transition: 0.3s; /* ホバーの変化を滑らかに */
+}
+
+/* ホバー時（カーソルをのせた時）の見た目 */
+button:hover {
+  background-color: #8e8e8e; /* 背景色 */
+}
