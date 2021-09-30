@@ -87,13 +87,14 @@ video {
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-bottom: 200px;
 }
 
 
 
 .container_frame .videoframe {
-  height: 450px;
-  width: 800px;
+  height: 500px;
+  width: 850px;
   border: solid 3px #000000;
 }
 
