@@ -145,6 +145,6 @@ button:hover {
 
 .c-video__embed {
   filter:brightness(150%);
-  filter:contrast(150%)
+  filter:contrast(150%);
   border: solid 50px #ffffff
 }
