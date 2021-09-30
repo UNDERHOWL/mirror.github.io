@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* 全体を囲うコンテナー */
@@ -18,7 +19,6 @@ body {
 .clock {
   align-items: left;
   justify-content: left;
-  font-family: 'Share Tech Mono', monospace;
   line-height: 1.2;
   text-align: center;
 }
@@ -89,10 +89,12 @@ video {
   text-align: center;
 }
 
+
+
 .container_frame .videoframe {
   height: 450px;
   width: 800px;
-  border: solid 3px #ffffff;
+  border: solid 3px #000000;
 }
 
 #print {
@@ -126,9 +128,10 @@ button {
   /* 整える */
   margin: 1em 0; /* 前後の隙間 */
   padding: 0.6em 1em; /* 塗りの余白 */
-  font-size: 1em; /* フォントサイズ */
-  background-color: #e3e3e3; /* 背景色 */
-  color: rgb(34, 34, 34); /* テキストカラー */
+  font-size: 2em; /* フォントサイズ */
+  font-family: 'Kosugi Maru', sans-serif;
+  background-color: #e2e2e2; /* 背景色 */
+  color: rgb(19, 19, 19); /* テキストカラー */
   cursor: pointer; /* カーソルを指マークに */
   border-radius: 3px; /* 角の丸み */
   border: 0; /* 枠線を消す */
@@ -137,5 +140,11 @@ button {
 
 /* ホバー時（カーソルをのせた時）の見た目 */
 button:hover {
-  background-color: #8e8e8e; /* 背景色 */
+  background-color: #6c6c6c; /* 背景色 */
+}
+
+.c-video__embed {
+  filter:brightness(150%);
+  filter:contrast(150%)
+  border: solid 50px #ffffff
 }
