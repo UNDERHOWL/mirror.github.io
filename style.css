@@ -120,31 +120,141 @@ video {
   justify-content: center;
 }
 
-button {
-  /* ブラウザ特有のスタイルを無効に */
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-
-  /* 整える */
-  margin: 1em 0; /* 前後の隙間 */
-  padding: 0.6em 1em; /* 塗りの余白 */
-  font-size: 2em; /* フォントサイズ */
-  font-family: 'Kosugi Maru', sans-serif;
-  background-color: #e2e2e2; /* 背景色 */
-  color: rgb(19, 19, 19); /* テキストカラー */
-  cursor: pointer; /* カーソルを指マークに */
-  border-radius: 3px; /* 角の丸み */
-  border: 0; /* 枠線を消す */
-  transition: 0.3s; /* ホバーの変化を滑らかに */
+/*ボタン*/
+#container {
+  display: flex;
+  background-color: #242424;
+  padding: 30px;
+  border-radius: 10px;
 }
 
-/* ホバー時（カーソルをのせた時）の見た目 */
-button:hover {
-  background-color: #6c6c6c; /* 背景色 */
+button{
+  border: none;
+}
+
+button {
+  margin: 0;
+/*フォントサイズ*/
+  font-size: 1.6em;
+/*フォントの太さ*/
+  font-weight: 700;
+/*行間の調節*/
+  line-height: 0.75;
+/*要素を配置する基準*/
+  position: relative;
+/*改行が入らず横に並ぶ*/
+  display: inline-block;
+/*要素の内側に領域を追加する*/
+  padding: 1rem 4rem;
+/*ホバー時カーソルをポインターにする*/
+  cursor: pointer;
+/*ユーザーが文章を範囲選択できるか*/
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+/*変化するときの秒数*/
+  transition: all 0.5s;
+/*水平方向の配置*/
+  text-align: center;
+/*水平方向の配置*/
+  vertical-align: middle;
+/*テキストのスタイルの指定*/
+  text-decoration: none;
+/*文字間隔の指定*/
+  letter-spacing: 0.1em;
+/*フォントのカラー*/
+  color: #212529;
+/*要素の外側の角の丸みを指定*/
+  border-radius: 0;
+}
+
+/*送信ボタン*/
+button#download {
+/*パディングボックスに合わせて切り取る*/
+    overflow: hidden;
+/*要素の内側に領域を追加する*/
+    padding: 1.5rem 6rem;
+/*フォントカラーの指定*/  
+    color: #242424;
+/*角の丸みの指定*/
+    border-radius: 10px;
+/*ボタンの色の指定*/
+    background-color: #dadada;
+  }
+  
+  button#download span {
+/*ポジションを相対的に動かす*/
+    position: relative;
+  }
+/*レイヤーの位置的な*/
+/*ちなみにこれは後ろの円*/
+  button#download:before {
+/*ポジションを固定する*/
+    position: absolute;
+/*ポジションがabsoluteの時の上からの距離*/
+    top: 0;
+/*ポジションがabsoluteの時の左端からの距離*/
+    left: 0;
+/*大きさの指定*/
+    width: 100px;
+    height: 100px;
+  
+    content: '';
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: translateX(-80%) translateY(-25px);
+    transform: translateX(-80%) translateY(-25px);
+  
+    background: #61a1b4;
+  }
+  
+  button#download:hover::before{
+    width: 400px;
+    height: 400px;
+  
+    -webkit-transform: translateX(-1%) translateY(-175px);
+  
+    transform: translateX(-1%) translateY(-175px);
+  }
+  /*送信ボタンend*/
+  
+/*録画ボタン*/
+/*ボタン本体のコード*/
+button#record {
+  align-items: center;
+  color: #fff;
+  background-color: #ff4242;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+button#record {
+  border-radius: 50%;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+}
+  /*録画ボタンend*/
+
+  /*取得ボタン*/
+
+button#start {
+  border-radius: 10px;
+  color: #242424;
+  background-color: #dadada;
+  /*要素の内側に領域を追加する*/
+  padding: 1.5rem 3rem;
 }
 
 .c-video__embed {
   filter:brightness(150%);
   border: solid 50px #ffffff
+}
+
+.comment {
+  font-weight: 700;
+  font-size: 1.6em;
+  line-height: 0.75;
 }
