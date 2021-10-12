@@ -1,36 +1,53 @@
 <!DOCTYPE html>
-<html lang="ja">
+<% console.log("AAA") %>
 <head>
+  <script src="/js/HTMLURL.js"></script>
   <!--時計-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--天気予報-->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Refresh" content="2;url='index.html'">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <title>Digital Clock</title>
   <!-- CSSファイル読み込み -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<% var print = "/js/HTMLURL.js" %>
   <div class="container">
     <div class="clock">
       <p class="clock-date"></p>
       <p class="clock-time"></p>
         <!-- javascriptで得た結果を表示する場所 -->
       <ul id='messages'></ul>
-    </div>  
-  </div>
-  <div class="container_comment">
-        <div class="comment">
-            <p>送信しました</p>
-        </div>
     </div>
+    
+  </div>
   <!-- JavaScriptファイル読み込み -->
-  <script src="clock.js"></script>
-
+  <script src="/js/clock.js"></script>
+  <script src="/js/test.js"></script>
    <!-- 天気予報APIを参照するためのjavascript -->
-   <script src="weatherForcast.js"></script>
+   <script src="/js/weatherForcast.js"></script>
+
+    <!--youtubeの最新の動画を取ってくるやつ-->
+    <div class="youtube">
+        <div class="container">
+          <video
+            class="c-video__embed"
+            src=  <%= print %>
+            width="800px"
+            height="450px"
+            autoplay
+            muted
+            playsinline
+          ></video>
+        </div>
+      </div>
+      <div class="button">
+         <div class="container">
+           <button class="reply" onclick="location.href='record_page.html'">返事をする</button>
+         </div>
+      </div>
 </body>
 </html>
