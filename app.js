@@ -4,6 +4,17 @@
 // express モジュールのインスタンス作成
 const express = require('express');
 const app = express();
+
+// ビューエンジンをejsにセットする
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+// express に ejs のテンプレートエンジンを設定した場合
+// /views フォルダが index.ejs のデフォルトになります
+
+app.get("/aaa", function(req, res, next){
+  res.render("index", {});
+});
 // パス指定用モジュール
 const path = require('path');
 
