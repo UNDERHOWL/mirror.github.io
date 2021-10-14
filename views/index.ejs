@@ -1,7 +1,7 @@
+<!--このファイルは不要ですが開発用に念のために置いています-->
+
 <!DOCTYPE html>
-<% console.log("AAA") %>
 <head>
-  <script src="/js/HTMLURL.js"></script>
   <!--時計-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<% var print = "/js/HTMLURL.js" %>
+<% var print = /views/print.js %>
+
+<script src="/print.js"></script>
+
   <div class="container">
     <div class="clock">
       <p class="clock-date"></p>
@@ -31,7 +34,16 @@
    <script src="/js/weatherForcast.js"></script>
 
     <!--youtubeの最新の動画を取ってくるやつ-->
-    <div class="youtube">
+    <div id="box"></div>
+	
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+      $(function(){
+        $("#box").load("div.html");
+      });
+    </script>
+  
+    <!--<div class="youtube">
         <div class="container">
           <video
             class="c-video__embed"
@@ -43,7 +55,7 @@
             playsinline
           ></video>
         </div>
-      </div>
+      </div>-->
       <div class="button">
          <div class="container">
            <button class="reply" onclick="location.href='record_page.html'">返事をする</button>
