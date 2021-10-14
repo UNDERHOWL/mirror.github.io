@@ -1,9 +1,13 @@
-/**
- * /app.js
- */ 
+//-------------------------------------------
+//サーバー用ファイル
+//node app.jsで起動後http://localhost:8080
+//でアクセス可能
+//--------------------------------------------
+
 // express モジュールのインスタンス作成
 const express = require('express');
 const app = express();
+var fs = require('fs');
 
 // ビューエンジンをejsにセットする
 app.set('views', __dirname + '/views');
@@ -13,7 +17,7 @@ app.set('view engine', 'ejs');
 // /views フォルダが index.ejs のデフォルトになります
 
 app.get("/aaa", function(req, res, next){
-  res.render("index", {});
+  res.render("index.ejs", {fs: fs});
 });
 // パス指定用モジュール
 const path = require('path');
