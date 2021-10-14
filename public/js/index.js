@@ -46,7 +46,7 @@ function startRecording() {
   }
 
   console.log("Created MediaRecorder", mediaRecorder);
-  recordBtn.textContent = "録画停止";
+  recordBtn.textContent = "停止";
   //playBtn.disabled = true;
   downloadBtn.disabled = true;
 
@@ -79,11 +79,11 @@ startBtn.addEventListener("click", () => {
 });
 
 recordBtn.addEventListener("click", () => {
-  if (recordBtn.textContent === "録画開始") {
+  if (recordBtn.textContent === "録画") {
     startRecording();
   } else {
     stopRecording();
-    recordBtn.textContent = "録画開始";
+    recordBtn.textContent = "録画";
     //playBtn.disabled = false;
     downloadBtn.disabled = false;
   }
