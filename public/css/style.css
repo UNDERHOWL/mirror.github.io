@@ -8,6 +8,15 @@ body {
     color: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
+/*ページ遷移アニメーション*/
+.wrap {
+	animation: fadein 3s forwards;
+}
+
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
 
 /* 全体を囲うコンテナー */
 .container {
