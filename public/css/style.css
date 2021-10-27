@@ -320,7 +320,7 @@ button#download {
 /*角の丸みの指定*/
     border-radius: 10px;
 /*ボタンの色の指定*/
-    background-color: #dadada;
+    background-color: #000000;
     margin-top: auto;
     margin-bottom: auto;
   }
@@ -329,16 +329,16 @@ button#download {
 /*ポジションを相対的に動かす*/
     position: relative;
   }
-/*レイヤーの位置的な*/
-/*ちなみにこれは後ろの円*/
+/*レイヤーの位置的な
+/*ちなみにこれは後ろの円
   button#download:before {
-/*ポジションを固定する*/
+/*ポジションを固定する
     position: absolute;
-/*ポジションがabsoluteの時の上からの距離*/
+/*ポジションがabsoluteの時の上からの距離
     top: 0;
-/*ポジションがabsoluteの時の左端からの距離*/
+/*ポジションがabsoluteの時の左端からの距離
     left: 0;
-/*大きさの指定*/
+/*大きさの指定
     width: 100px;
     height: 100px;
   
@@ -350,6 +350,7 @@ button#download {
   
     background: #61a1b4;
   }
+  */
   
   button#download:hover::before{
     width: 400px;
@@ -366,7 +367,7 @@ button#download {
 button#record {
   align-items: center;
   color: #fff;
-  background-color: #ff4242;
+  background-color: #000000;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -385,7 +386,7 @@ button#record {
 button#start {
   border-radius: 10px;
   color: #242424;
-  background-color: #dadada;
+  background-color: #000000;
   /*要素の内側に領域を追加する*/
   padding: 1.5rem 3rem;
   margin-top: auto;
