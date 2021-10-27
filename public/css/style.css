@@ -366,7 +366,7 @@ button#download {
 /*ボタン本体のコード*/
 button#record {
   align-items: center;
-  color: #fff;
+  color: rgb(0, 0, 0);
   background-color: #000000;
   margin-left: 50px;
   margin-right: 50px;
