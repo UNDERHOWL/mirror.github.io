@@ -179,10 +179,20 @@ button {
   height: 60px;
 }
 
+.youtube {
+  display: flex;
+}
+
 .c-video__embed {
   filter:brightness(150%);
   /*clip-path:inset(0 17% 0 17%);*/
   border: solid 50px #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reply {
+  margin-top: 50px;
 }
 
 .comment {
@@ -193,7 +203,7 @@ button {
 
 /*偽物ボタンstart*/
 .fake_button_flex {
-  margin-top: 125px;
+  margin-top: 70px;
   display: flex;
 }
 
