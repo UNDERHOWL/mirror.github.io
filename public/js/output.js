@@ -20,8 +20,8 @@ async function testA() {
     console.log("a = ", urlID)
     var FID = urlID.replace("\[\[\"", "").replace("\"\]\]", "");
     console.log("b = ", FID)
-     return fs.writeFile('movieurl.html', '<div class="youtube">' +'\n<div class="container">' +'\n<video'+'\nclass=\"c-video__embed\"'+'\nsrc='+ "\"https://drive.google.com/uc?id=" + FID + '&export=download\"' +'width=\"800px\"'
-    + 'height=\"450px\"'+'\nautoplay'+'\nplaysinline'+'></video>'+'</div>'+'</div>', function (err) {
+     return fs.writeFile('movieurl.html', '<div class="youtube">' +'\n<video'+'\nclass=\"c-video__embed\"'+'\nsrc='+ "\"https://drive.google.com/uc?id=" + FID + '&export=download\"' +'width=\"800px\"'
+    + 'height=\"450px\"'+'\nautoplay'+'\nplaysinline'+'></video>'+'</div>', function (err) {
         if (err) { throw err; }
     });
 
