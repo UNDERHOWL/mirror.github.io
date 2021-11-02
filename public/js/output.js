@@ -31,3 +31,4 @@ async function testA() {
 
 
 testA();
+console.log("確認:動画ID更新ファイルです")
