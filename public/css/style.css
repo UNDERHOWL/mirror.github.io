@@ -132,7 +132,7 @@ video {
 /*ボタン*/
 #container {
   display: flex;
-  background-color: #242424;
+  background-color: #000000;
   padding: 30px;
   border-radius: 10px;
 }
@@ -193,6 +193,7 @@ button {
 
 .reply {
   background-color: black;
+  color: #000000;
   margin-top: 100px;
 }
 
@@ -316,7 +317,7 @@ button#download {
 /*要素の内側に領域を追加する*/
     padding: 1.5rem 6rem;
 /*フォントカラーの指定*/  
-    color: #242424;
+    color: #000000;
 /*角の丸みの指定*/
     border-radius: 10px;
 /*ボタンの色の指定*/
@@ -385,7 +386,7 @@ button#record {
 
 button#start {
   border-radius: 10px;
-  color: #242424;
+  color: #000000;
   background-color: #000000;
   /*要素の内側に領域を追加する*/
   padding: 1.5rem 3rem;
