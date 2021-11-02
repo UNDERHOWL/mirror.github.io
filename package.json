@@ -4,11 +4,11 @@
   "description": "top_pageで通知を表示",
   "main": "app.js",
   "dependencies": {
-
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "googleapis": "^88.2.0"
+    "googleapis": "^88.2.0",
+    "node-notifier": "^10.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
