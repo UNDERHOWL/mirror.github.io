@@ -8,6 +8,15 @@ body {
     color: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
+/*ページ遷移アニメーション*/
+.wrap {
+	animation: fadein 3s forwards;
+}
+
+@keyframes fadein {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
 
 /* 全体を囲うコンテナー */
 .container {
@@ -87,7 +96,7 @@ video {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding-bottom: 200px;
+  padding-bottom: 0px;
 }
 
 
@@ -167,7 +176,138 @@ button {
   color: #212529;
 /*要素の外側の角の丸みを指定*/
   border-radius: 0;
+  height: 60px;
 }
+
+.youtube {
+  display: flex;
+}
+
+.c-video__embed {
+  filter:brightness(150%);
+  /*clip-path:inset(0 17% 0 17%);*/
+  border: solid 50px #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.reply {
+  background-color: black;
+  margin-top: 100px;
+}
+
+.fake_button {
+  display: flex;
+}
+
+.fake_reply {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.comment {
+  font-weight: 700;
+  font-size: 1.6em;
+  line-height: 0.75;
+}
+
+/*偽物ボタンstart*/
+.fake_button_flex {
+  margin-top: 70px;
+  display: flex;
+}
+
+.fake_button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*送信ボタン*/
+button.download {
+  /*パディングボックスに合わせて切り取る*/
+      overflow: hidden;
+  /*要素の内側に領域を追加する*/
+      padding: 1.5rem 6rem;
+  /*フォントカラーの指定*/  
+      color: #242424;
+  /*角の丸みの指定*/
+      border-radius: 10px;
+  /*ボタンの色の指定*/
+      background-color: #dadada;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    
+    button.download span {
+  /*ポジションを相対的に動かす*/
+      position: relative;
+    }
+  /*レイヤーの位置的な*/
+  /*ちなみにこれは後ろの円*/
+    button.download:before {
+  /*ポジションを固定する*/
+      position: absolute;
+  /*ポジションがabsoluteの時の上からの距離*/
+      top: 0;
+  /*ポジションがabsoluteの時の左端からの距離*/
+      left: 0;
+  /*大きさの指定*/
+      width: 100px;
+      height: 100px;
+    
+      content: '';
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+      -webkit-transform: translateX(-80%) translateY(-25px);
+      transform: translateX(-80%) translateY(-25px);
+    
+      background: #61a1b4;
+    }
+    
+    button.download:hover::before{
+      width: 400px;
+      height: 400px;
+    
+      -webkit-transform: translateX(-1%) translateY(-175px);
+    
+      transform: translateX(-1%) translateY(-175px);
+    }
+    /*送信ボタンend*/
+    
+  /*録画ボタン*/
+  /*ボタン本体のコード*/
+  button.record {
+    align-items: center;
+    color: #fff;
+    background-color: #ff4242;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  button.record {
+    border-radius: 50%;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+  }
+    /*録画ボタンend*/
+  
+    /*取得ボタン*/
+  
+  button.start {
+    border-radius: 10px;
+    color: #242424;
+    background-color: #dadada;
+    /*要素の内側に領域を追加する*/
+    padding: 1.5rem 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  /*偽物ボタンend*/
+
+  /*本物ボタンstart*/
 
 /*送信ボタン*/
 button#download {
@@ -180,23 +320,25 @@ button#download {
 /*角の丸みの指定*/
     border-radius: 10px;
 /*ボタンの色の指定*/
-    background-color: #dadada;
+    background-color: #000000;
+    margin-top: auto;
+    margin-bottom: auto;
   }
   
   button#download span {
 /*ポジションを相対的に動かす*/
     position: relative;
   }
-/*レイヤーの位置的な*/
-/*ちなみにこれは後ろの円*/
+/*レイヤーの位置的な
+/*ちなみにこれは後ろの円
   button#download:before {
-/*ポジションを固定する*/
+/*ポジションを固定する
     position: absolute;
-/*ポジションがabsoluteの時の上からの距離*/
+/*ポジションがabsoluteの時の上からの距離
     top: 0;
-/*ポジションがabsoluteの時の左端からの距離*/
+/*ポジションがabsoluteの時の左端からの距離
     left: 0;
-/*大きさの指定*/
+/*大きさの指定
     width: 100px;
     height: 100px;
   
@@ -208,6 +350,7 @@ button#download {
   
     background: #61a1b4;
   }
+  */
   
   button#download:hover::before{
     width: 400px;
@@ -223,8 +366,8 @@ button#download {
 /*ボタン本体のコード*/
 button#record {
   align-items: center;
-  color: #fff;
-  background-color: #ff4242;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -243,18 +386,11 @@ button#record {
 button#start {
   border-radius: 10px;
   color: #242424;
-  background-color: #dadada;
+  background-color: #000000;
   /*要素の内側に領域を追加する*/
   padding: 1.5rem 3rem;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-.c-video__embed {
-  filter:brightness(150%);
-  border: solid 50px #ffffff
-}
-
-.comment {
-  font-weight: 700;
-  font-size: 1.6em;
-  line-height: 0.75;
-}
+/*フェイクボタン終了*/
