@@ -367,7 +367,7 @@ button#download {
 /*ボタン本体のコード*/
 button#record {
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   background-color: #000000;
   margin-left: 50px;
   margin-right: 50px;
@@ -393,5 +393,16 @@ button#start {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+.record > span:last-of-type,
+.record.active > span:first-of-type
+{
+    display: none;
+}
+
+.record.active > span:last-of-type {
+    display: inline;
+}
+
 
 /*フェイクボタン終了*/
