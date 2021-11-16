@@ -47,6 +47,26 @@ body {
     font-size: 25px;
     padding-left: 0;
 }
+/*トップ画面の通知*/
+.notification_container {
+  display: flex;
+}
+
+.notification {
+  margin: auto;
+  padding-top: 250px;
+}
+
+.notification_sentence {
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  background: linear-gradient(white, rgb(199, 199, 199));
+  color: #000000;
+  padding: 50px 75px 50px 75px;
+  text-decoration: none;
+  border-radius: 15px;
+}
 
 .youtube > .container {
     padding-bottom: 200px;
