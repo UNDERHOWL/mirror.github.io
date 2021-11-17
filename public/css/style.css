@@ -61,6 +61,26 @@ body {
   font-size: 20px;
   font-weight: 100;
   letter-spacing: 5px;
+  background: black;
+  color: #000000;
+  padding: 50px 75px 50px 75px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.notification_container_dummy {
+  display: flex;
+}
+
+.notification_dummy {
+  margin: auto;
+  padding-top: 250px;
+}
+
+.notification_sentence_dummy {
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 5px;
   background: linear-gradient(white, rgb(199, 199, 199));
   color: #000000;
   padding: 50px 75px 50px 75px;
@@ -78,6 +98,26 @@ body {
 }
 
 .notification_calender > .notification > .notification_sentence {
+  font-size: 20px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  background: black;
+  color: #000000;
+  padding: 50px 75px 50px 75px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+.notification_calender_dummy {
+  display: flex;
+}
+
+.notification_calender_dummy > .notification_dummy {
+  margin: auto;
+  padding-top: 250px;
+}
+
+.notification_calender_dummy > .notification_dummy > .notification_sentence_dummy {
   font-size: 20px;
   font-weight: 100;
   letter-spacing: 5px;
