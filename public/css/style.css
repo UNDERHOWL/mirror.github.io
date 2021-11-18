@@ -48,6 +48,10 @@ body {
     padding-left: 0;
 }
 /*トップ画面の通知*/
+#Day.close {
+  display: none;
+}
+
 .notification_container {
   display: flex;
 }
