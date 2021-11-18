@@ -52,6 +52,10 @@ body {
   display: flex;
 }
 
+.notification_container.close {
+  display: none;
+}
+
 .notification {
   margin: auto;
   padding-top: 250px;
@@ -103,7 +107,7 @@ body {
   letter-spacing: 5px;
   background: linear-gradient(white, rgb(199, 199, 199));
   color: #000000;
-  padding: 250px 75px 50px 75px;
+  padding: 50px 75px 50px 75px;
   text-decoration: none;
   border-radius: 15px;
 }
@@ -123,7 +127,7 @@ body {
   letter-spacing: 5px;
   background: black;
   color: #000000;
-  padding: 50px 75px 50px 75px;
+  padding: 250px 75px 50px 75px;
   text-decoration: none;
   border-radius: 15px;
 }
