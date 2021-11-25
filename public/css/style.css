@@ -2,400 +2,354 @@
 
 
 body {
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-    color: #ffffff;
-    font-family: 'Open Sans', sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
 }
 /*ページ遷移アニメーション*/
 .wrap {
-	animation: fadein 3s forwards;
+animation: fadein 3s forwards;
 }
 
 @keyframes fadein {
-	0% {opacity: 0}
-	100% {opacity: 1}
+0% {opacity: 0}
+100% {opacity: 1}
 }
 
 /* 全体を囲うコンテナー */
 .container {
-  display: flex;
+display: flex;
 
 }
 
 /* 時計の共通スタイル */
 .clock {
-  align-items: left;
-  justify-content: left;
-  line-height: 1.2;
-  text-align: center;
+align-items: left;
+justify-content: left;
+line-height: 1.2;
+text-align: center;
 }
 
 /* 日付のスタイル */
 .clock-date {
-  font-size: 25px;
+font-size: 25px;
 }
 
 /* 時間のスタイル */
 .clock-time {
-    margin: 5px;
-  font-size: 100px;
+  margin: 5px;
+font-size: 100px;
 }
 
 #messages {
-    font-size: 25px;
-    padding-left: 0;
+  font-size: 25px;
+  padding-left: 0;
 }
 /*トップ画面の通知*/
+#Day.close {
+display: none;
+}
+
 .notification_container {
-  display: flex;
+display: flex;
+}
+
+.notification_container.close {
+display: none;
 }
 
 .notification {
-  margin: auto;
-  padding-top: 250px;
+margin: auto;
+padding-top: 250px;
 }
 
 .notification_sentence {
-  font-size: 20px;
-  font-weight: 100;
-  letter-spacing: 5px;
-  background: linear-gradient(white, rgb(199, 199, 199));
-  color: #000000;
-  padding: 50px 75px 50px 75px;
-  text-decoration: none;
-  border-radius: 15px;
+font-size: 20px;
+font-weight: 100;
+letter-spacing: 5px;
+background: linear-gradient(white, rgb(199, 199, 199));
+color: #000000;
+padding: 50px 75px 50px 75px;
+text-decoration: none;
+border-radius: 15px;
 }
 
 .notification_container_dummy {
-  display: flex;
+display: flex;
 }
 
 .notification_dummy {
-  margin: auto;
-  padding-top: 250px;
+margin: auto;
+padding-top: 250px;
 }
 
 .notification_sentence_dummy {
-  font-size: 20px;
-  font-weight: 100;
-  letter-spacing: 5px;
-  background: black;
-  color: #000000;
-  padding: 250px 75px 50px 75px;
-  text-decoration: none;
-  border-radius: 15px;
+font-size: 20px;
+font-weight: 100;
+letter-spacing: 5px;
+background: black;
+color: #000000;
+padding: 250px 75px 50px 75px;
+text-decoration: none;
+border-radius: 15px;
 }
 
 .notification_calender {
-  display: flex;
+display: flex;
 }
 
 .notification_calender > .notification {
-  margin: auto;
-  padding-top: 50px;
+margin: auto;
+padding-top: 50px;
 }
 
 .notification_calender > .notification > .notification_sentence {
-  font-size: 20px;
-  font-weight: 100;
-  letter-spacing: 5px;
-  background: linear-gradient(white, rgb(199, 199, 199));
-  color: #000000;
-  padding: 250px 75px 50px 75px;
-  text-decoration: none;
-  border-radius: 15px;
+font-size: 20px;
+font-weight: 100;
+letter-spacing: 5px;
+background: linear-gradient(white, rgb(199, 199, 199));
+color: #000000;
+padding: 50px 75px 50px 75px;
+text-decoration: none;
+border-radius: 15px;
 }
 
 .notification_calender_dummy {
-  display: flex;
+display: flex;
 }
 
 .notification_calender_dummy > .notification_dummy {
-  margin: auto;
-  padding-top: 250px;
+margin: auto;
+padding-top: 250px;
 }
 
 .notification_calender_dummy > .notification_dummy > .notification_sentence_dummy {
-  font-size: 20px;
-  font-weight: 100;
-  letter-spacing: 5px;
-  background: black;
-  color: #000000;
-  padding: 50px 75px 50px 75px;
-  text-decoration: none;
-  border-radius: 15px;
+font-size: 20px;
+font-weight: 100;
+letter-spacing: 5px;
+background: black;
+color: #000000;
+padding: 250px 75px 50px 75px;
+text-decoration: none;
+border-radius: 15px;
 }
 
 /*通知終了*/
 
 .youtube > .container {
-    padding-bottom: 200px;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.button > .container {
+  padding-bottom: 200px;
   display:flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.button > .container {
+display:flex;
+align-items: center;
+justify-content: center;
+text-align: center;
 }
 
 /* 文字サイズ調整 */
 @media screen and (max-width: 500px) {
-  .clock-date {
-    font-size: 5vw;
-  }
-  .clock-time {
-    font-size: 20vw;
-  }
+.clock-date {
+  font-size: 5vw;
+}
+.clock-time {
+  font-size: 20vw;
+}
 }
 
 /*
 video {
-  background:#222;
-  vertical-align: top;
-  --width: 25vw;
-  width: var(--width);
-  height: calc(var(--width) * 0.5625);
+background:#222;
+vertical-align: top;
+--width: 25vw;
+width: var(--width);
+height: calc(var(--width) * 0.5625);
 }
 */
 
-.record {
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-top: 10px;
+.record_container {
+display:flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding-top: 10px;
 }
 
 .container_frame{
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 0px;
+display:flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding-bottom: 0px;
 }
 
 
 
 .container_frame .videoframe {
-  height: 500px;
-  width: 850px;
-  border: solid 3px #000000;
+height: 500px;
+width: 850px;
+border: solid 3px #000000;
 }
 
 #print {
-  display:flex;
-  justify-content: right;
-  padding-right: 250px;
+display:flex;
+justify-content: right;
+padding-right: 250px;
 }
 
 .video {
-  display: flex;
+display: flex;
 }
 
 #local {
-  justify-content: left;
+justify-content: left;
 }
 
 .container_comment {
-  text-align: center;
+text-align: center;
 }
 
 .comment {
-  justify-content: center;
+justify-content: center;
+}
+
+.youtube {
+display: flex;
 }
 
 /*ボタン*/
 #container {
-  display: flex;
-  background-color: #000000;
-  padding: 30px;
-  border-radius: 10px;
+display: flex;
+background-color: #000000;
+padding: 30px;
+border-radius: 10px;
 }
 
 button{
-  border: none;
+border: none;
 }
 
 button {
-  margin: 0;
+margin: 0;
 /*フォントサイズ*/
-  font-size: 1.6em;
+font-size: 1.6em;
 /*フォントの太さ*/
-  font-weight: 700;
+font-weight: 700;
 /*行間の調節*/
-  line-height: 0.75;
+line-height: 0.75;
 /*要素を配置する基準*/
-  position: relative;
+position: relative;
 /*改行が入らず横に並ぶ*/
-  display: inline-block;
+display: inline-block;
 /*要素の内側に領域を追加する*/
-  padding: 1rem 4rem;
+padding: 1rem 4rem;
 /*ホバー時カーソルをポインターにする*/
-  cursor: pointer;
+cursor: pointer;
 /*ユーザーが文章を範囲選択できるか*/
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 /*変化するときの秒数*/
-  transition: all 0.5s;
+transition: all 0.5s;
 /*水平方向の配置*/
-  text-align: center;
+text-align: center;
 /*水平方向の配置*/
-  vertical-align: middle;
+vertical-align: middle;
 /*テキストのスタイルの指定*/
-  text-decoration: none;
+text-decoration: none;
 /*文字間隔の指定*/
-  letter-spacing: 0.1em;
+letter-spacing: 0.1em;
 /*フォントのカラー*/
-  color: #212529;
+color: #212529;
 /*要素の外側の角の丸みを指定*/
-  border-radius: 0;
-  height: 60px;
-}
-
-.youtube {
-  display: flex;
+border-radius: 0;
+height: 60px;
 }
 
 .c-video__embed {
-  filter:brightness(150%);
-  /*clip-path:inset(0 17% 0 17%);*/
-  border: solid 50px #ffffff;
-  margin-left: auto;
-  margin-right: auto;
+filter:brightness(150%);
+/*clip-path:inset(0 17% 0 17%);*/
+border: solid 50px #ffffff;
+margin-left: auto;
+margin-right: auto;
 }
 
 .reply {
-  background-color: black;
-  color: #000000;
-  margin-top: 100px;
+background-color: black;
+color: #000000;
+margin-top: 100px;
 }
 
 .fake_button {
-  display: flex;
+display: flex;
 }
 
 .fake_reply {
-  margin-top: 80px;
-  margin-left: auto;
-  margin-right: auto;
+margin-top: 80px;
+margin-left: auto;
+margin-right: auto;
 }
 
-.comment {
-  font-weight: 700;
-  font-size: 1.6em;
-  line-height: 0.75;
+/*本物ボタン*/
+
+.record_container {
+display:flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding-top: 10px;
 }
 
-/*偽物ボタンstart*/
-.fake_button_flex {
-  margin-top: 70px;
-  display: flex;
+#record {
+display: block;
+align-items: center;
+color: rgb(0, 0, 0);
+background-color: #000000;
+margin-left: 50px;
+margin-right: 50px;
+border-radius: 50%;
+line-height: 100px;
+width: 100px;
+height: 100px;
+padding: 0;
 }
 
-.fake_button {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
+#record.record_none {
+display: none;
 }
-/*送信ボタン*/
-button.download {
-  /*パディングボックスに合わせて切り取る*/
-      overflow: hidden;
-  /*要素の内側に領域を追加する*/
-      padding: 1.5rem 6rem;
-  /*フォントカラーの指定*/  
-      color: #242424;
-  /*角の丸みの指定*/
-      border-radius: 10px;
-  /*ボタンの色の指定*/
-      background-color: #dadada;
-      margin-top: auto;
-      margin-bottom: auto;
-    }
-    
-    button.download span {
-  /*ポジションを相対的に動かす*/
-      position: relative;
-    }
-  /*レイヤーの位置的な*/
-  /*ちなみにこれは後ろの円*/
-    button.download:before {
-  /*ポジションを固定する*/
-      position: absolute;
-  /*ポジションがabsoluteの時の上からの距離*/
-      top: 0;
-  /*ポジションがabsoluteの時の左端からの距離*/
-      left: 0;
-  /*大きさの指定*/
-      width: 100px;
-      height: 100px;
-    
-      content: '';
-      -webkit-transition: all .3s ease-in-out;
-      transition: all .3s ease-in-out;
-      -webkit-transform: translateX(-80%) translateY(-25px);
-      transform: translateX(-80%) translateY(-25px);
-    
-      background: #61a1b4;
-    }
-    
-    button.download:hover::before{
-      width: 400px;
-      height: 400px;
-    
-      -webkit-transform: translateX(-1%) translateY(-175px);
-    
-      transform: translateX(-1%) translateY(-175px);
-    }
-    /*送信ボタンend*/
-    
-  /*録画ボタン*/
-  /*ボタン本体のコード*/
-  button.record {
-    align-items: center;
-    color: #fff;
-    background-color: #ff4242;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-  
-  button.record {
-    border-radius: 50%;
-    line-height: 100px;
-    width: 100px;
-    height: 100px;
-    padding: 0;
-  }
-    /*録画ボタンend*/
-  
-    /*取得ボタン*/
-  
-  button.start {
-    border-radius: 10px;
-    color: #242424;
-    background-color: #dadada;
-    /*要素の内側に領域を追加する*/
-    padding: 1.5rem 3rem;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  /*偽物ボタンend*/
 
-  /*本物ボタンstart*/
+#stop {
+display: none;
+}
 
-/*送信ボタン*/
-button#download {
+#stop.stop_block {
+display: block;
+align-items: center;
+color: rgb(0, 0, 0);
+background-color: #000000;
+margin-left: 50px;
+margin-right: 50px;
+line-height: 100px;
+width: 100px;
+height: 100px;
+padding: 0;
+}
+
+#again {
+display: none;
+}
+
+#again.again_block {
+display: block;
 /*パディングボックスに合わせて切り取る*/
-    overflow: hidden;
+overflow: hidden;
 /*要素の内側に領域を追加する*/
     padding: 1.5rem 6rem;
 /*フォントカラーの指定*/  
@@ -406,85 +360,108 @@ button#download {
     background-color: #000000;
     margin-top: auto;
     margin-bottom: auto;
-  }
-  
-  button#download span {
-/*ポジションを相対的に動かす*/
-    position: relative;
-  }
-/*レイヤーの位置的な
-/*ちなみにこれは後ろの円
-  button#download:before {
-/*ポジションを固定する
-    position: absolute;
-/*ポジションがabsoluteの時の上からの距離
-    top: 0;
-/*ポジションがabsoluteの時の左端からの距離
-    left: 0;
-/*大きさの指定
-    width: 100px;
-    height: 100px;
-  
-    content: '';
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    -webkit-transform: translateX(-80%) translateY(-25px);
-    transform: translateX(-80%) translateY(-25px);
-  
-    background: #61a1b4;
-  }
-  */
-  
-  button#download:hover::before{
-    width: 400px;
-    height: 400px;
-  
-    -webkit-transform: translateX(-1%) translateY(-175px);
-  
-    transform: translateX(-1%) translateY(-175px);
-  }
-  /*送信ボタンend*/
-  
-/*録画ボタン*/
-/*ボタン本体のコード*/
-button#record {
-  align-items: center;
-  color: rgb(0, 0, 0);
-  background-color: #000000;
-  margin-left: 50px;
-  margin-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-button#record {
-  border-radius: 50%;
-  line-height: 100px;
-  width: 100px;
-  height: 100px;
-  padding: 0;
-}
-  /*録画ボタンend*/
-
-  /*取得ボタン*/
-
-button#start {
-  border-radius: 10px;
-  color: #000000;
-  background-color: #000000;
-  /*要素の内側に領域を追加する*/
-  padding: 1.5rem 3rem;
-  margin-top: auto;
-  margin-bottom: auto;
+#download {
+display: none;
 }
 
-.record > span:last-of-type,
-.record.active > span:first-of-type
-{
-    display: none;
+#download.download_block {
+display: block;
+/*パディングボックスに合わせて切り取る*/
+overflow: hidden;
+/*要素の内側に領域を追加する*/
+    padding: 1.5rem 6rem;
+/*フォントカラーの指定*/  
+    color: #000000;
+/*角の丸みの指定*/
+    border-radius: 10px;
+/*ボタンの色の指定*/
+    background-color: #000000;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.record.active > span:last-of-type {
-    display: inline;
+/*フェイクボタン*/
+.record {
+display: block;
+align-items: center;
+color: #fff;
+background-color: #ff4242;
+margin-left: 50px;
+margin-right: 50px;
+border-radius: 50%;
+line-height: 100px;
+width: 100px;
+height: 100px;
+padding: 0;
 }
 
+.record.record_none {
+display: none;
+}
 
-/*フェイクボタン終了*/
+.stop {
+display: none;
+}
+
+.stop.stop_block {
+display: block;
+align-items: center;
+color: #fff;
+background-color: #ff4242;
+margin-left: 50px;
+margin-right: 50px;
+line-height: 100px;
+width: 100px;
+height: 100px;
+padding: 0;
+}
+
+.again {
+display: none;
+}
+
+.again.again_block {
+display: block;
+/*パディングボックスに合わせて切り取る*/
+overflow: hidden;
+/*要素の内側に領域を追加する*/
+    padding: 1.5rem 6rem;
+/*フォントカラーの指定*/  
+    color: #242424;
+/*角の丸みの指定*/
+    border-radius: 10px;
+/*ボタンの色の指定*/
+    background-color: #dadada;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.download {
+display: none;
+}
+
+.download.download_block {
+display: block;
+/*パディングボックスに合わせて切り取る*/
+overflow: hidden;
+/*要素の内側に領域を追加する*/
+    padding: 1.5rem 6rem;
+/*フォントカラーの指定*/  
+    color: #242424;
+/*角の丸みの指定*/
+    border-radius: 10px;
+/*ボタンの色の指定*/
+    background-color: #dadada;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}

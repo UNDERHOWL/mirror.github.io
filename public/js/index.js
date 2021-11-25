@@ -12,7 +12,8 @@ const localVideo = document.getElementById("local");
 const recordedVideo = document.getElementById("recorded");
 const startBtn = document.getElementById("start");
 const recordBtn = document.getElementById("record");
-//const playBtn = document.getElementById("play");
+const stopBtn = document.getElementById("stop");
+const againBtn = document.getElementById("again");
 const downloadBtn = document.getElementById("download");
 let mediaRecorder;
 let recordedBlobs;
@@ -44,12 +45,12 @@ function startRecording() {
     console.log(`Exception while creating MediaRecorder: ${error}`);
     return;
   }
-
+/*
   console.log("Created MediaRecorder", mediaRecorder);
   recordBtn.textContent = "停止";
   //playBtn.disabled = true;
   downloadBtn.disabled = true;
-
+*/
   mediaRecorder.onstop = event => {
     console.log("Recorder stopped: ", event);
   };
@@ -64,30 +65,38 @@ function stopRecording() {
   console.log("Recorded media.");
 }
 
-startBtn.addEventListener("click", () => {
+function camon() { //ここnoaddEventListenerを一つのファンクションにして
   const constraints = {
     video: {
       width: 1280,
       height: 720
     }
-  };
+  }
 
   navigator.mediaDevices
     .getUserMedia(constraints)
     .then(getLocalMediaStream)
+    .then(startRecording)
     .catch(handleLocalMediaStreamError);
-});
+};
 
 recordBtn.addEventListener("click", () => {
   if (recordBtn.textContent === "録画") {
+    camon();  //ここに呼びだせば行ける
     startRecording();
-  } else {
-    stopRecording();
-    recordBtn.textContent = "録画";
-    //playBtn.disabled = false;
-    downloadBtn.disabled = false;
   }
 });
+
+stopBtn.addEventListener("click", () => {
+  stopRecording();
+});
+
+againBtn.addEventListener("click", () => {
+  if (againBtn.textContent === "録り直す") {
+    startRecording();
+  }
+});
+
 
 /*playBtn.addEventListener("click", () => {
   const superBuffer = new Blob(recordedBlobs, { type: "video/webm" });

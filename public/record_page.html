@@ -39,21 +39,20 @@
     <!--ビデオのフレーム-->
     </div>
   </div>
-  <div class="record">
+  <div class="record_container">
     <div id="container">
-        <button id="start">カメラをオンにする</button>
-        <button id="record" disabled>録画</button>
-        <button id="download" onclick="location.href='jump.html'" disabled onclick="(function(){var e=document.getElementById('print');e.style.display='none'})()" >そうしん</button>
+        <button id="record">録画</button>
+        <button id="stop">停止</button>
+        <button id="again">録り直す</button>
+        <button id="download" onclick="location.href='jump.html'" onclick="(function(){var e=document.getElementById('print');e.style.display='none'})()" >おくる</button>
     </div>
   </div>
-  <div class="fake_button_flex">
-    <div class="fake_button">
-      <button class="start">カメラをオンにする</button>
-      <button class="record">
-        <span>録画</span>
-        <span>停止</span>
-      </button>
-      <button class="download" >そうしん</button>
+  <div class="record_container">
+    <div id="container">
+      <button class="record">録画</button>
+      <button class="stop">停止</button>
+      <button class="again">録り直す</button>
+      <button class="download" >おくる</button>
     </div>
   </div>
   <div class="video">
