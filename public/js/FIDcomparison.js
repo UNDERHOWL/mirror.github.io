@@ -1,8 +1,7 @@
 const fs = require('fs');
 const movielink = require('./dlivelink')
-var text1 = fs.readFileSync("./FIDtxtsave.txt", 'utf8');
-var text2 = fs.readFileSync("./FIDtxtsave2.txt", 'utf8');
-
+var text1 = fs.readFileSync("FIDtxtsave.txt", 'utf8');
+var text2 = fs.readFileSync("FIDtxtsave2.txt", 'utf8');
 
 console.log(text1);
 console.log(text2);
