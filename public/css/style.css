@@ -66,6 +66,11 @@ padding-top: 250px;
 }
 
 .notification_sentence {
+display: none;
+}
+
+.notification_sentence.notification_sentence_block {
+    display: block;
     font-size: 1.6em;
     /*フォントの太さ*/
     font-weight: 700;
