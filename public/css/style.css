@@ -66,9 +66,11 @@ padding-top: 250px;
 }
 
 .notification_sentence {
-font-size: 20px;
-font-weight: 100;
-letter-spacing: 5px;
+    font-size: 1.6em;
+    /*フォントの太さ*/
+    font-weight: 700;
+    /*行間の調節*/
+    line-height: 0.75;
 background: linear-gradient(white, rgb(199, 199, 199));
 color: #000000;
 padding: 50px 75px 50px 75px;
@@ -86,9 +88,11 @@ padding-top: 250px;
 }
 
 .notification_sentence_dummy {
-font-size: 20px;
-font-weight: 100;
-letter-spacing: 5px;
+    font-size: 1.6em;
+    /*フォントの太さ*/
+    font-weight: 700;
+    /*行間の調節*/
+    line-height: 0.75;
 background: black;
 color: #000000;
 padding: 250px 75px 50px 75px;
@@ -106,9 +110,11 @@ padding-top: 50px;
 }
 
 .notification_calender > .notification > .notification_sentence {
-font-size: 20px;
-font-weight: 100;
-letter-spacing: 5px;
+    font-size: 1.6em;
+    /*フォントの太さ*/
+    font-weight: 700;
+    /*行間の調節*/
+    line-height: 0.75;
 background: linear-gradient(white, rgb(199, 199, 199));
 color: #000000;
 padding: 50px 75px 50px 75px;
@@ -126,9 +132,11 @@ padding-top: 250px;
 }
 
 .notification_calender_dummy > .notification_dummy > .notification_sentence_dummy {
-font-size: 20px;
-font-weight: 100;
-letter-spacing: 5px;
+    font-size: 1.6em;
+    /*フォントの太さ*/
+    font-weight: 700;
+    /*行間の調節*/
+    line-height: 0.75;
 background: black;
 color: #000000;
 padding: 250px 75px 50px 75px;
@@ -195,12 +203,6 @@ padding-bottom: 0px;
 height: 500px;
 width: 850px;
 border: solid 3px #000000;
-}
-
-#print {
-display:flex;
-justify-content: right;
-padding-right: 250px;
 }
 
 .video {
@@ -413,7 +415,7 @@ display: none;
 display: block;
 align-items: center;
 color: #fff;
-background-color: #ff4242;
+background-color: #ff0000;
 margin-left: 50px;
 margin-right: 50px;
 line-height: 100px;
@@ -464,4 +466,28 @@ overflow: hidden;
     margin-bottom: auto;
     margin-left: 50px;
     margin-right: 50px;
+}
+
+
+.rec {
+    display: none;
+}
+
+.rec.rec_block {
+    display: block;
+    animation: blinkEffect  2s ease infinite;
+    display:flex;
+    justify-content: right;
+}
+
+@keyframes blinkEffect {
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

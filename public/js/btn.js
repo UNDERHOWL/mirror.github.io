@@ -6,6 +6,7 @@ $(function(){
       $("#stop").addClass("stop_block");
       $(".record").addClass("record_none");
       $(".stop").addClass("stop_block");
+      $(".rec").addClass("rec_block");
   });
 
   $("#stop").click(function() {
@@ -14,8 +15,9 @@ $(function(){
       $("#again").addClass("again_block")
       $("#download").addClass("download_block")
       $(".stop").removeClass("stop_block");
-      $(".again").addClass("again_block")
-      $(".download").addClass("download_block")
+      $(".again").addClass("again_block");
+      $(".download").addClass("download_block");
+      $(".rec").removeClass("rec_block");
   });
 
   $("#again").click(function() {
@@ -26,5 +28,6 @@ $(function(){
       $(".again").removeClass("again_block");
       $(".download").removeClass("download_block");
       $(".stop").addClass("stop_block");
+      $(".rec").addClass("rec_block");
   });
 });
