@@ -19,13 +19,13 @@ let mediaRecorder;
 let recordedBlobs;
 
 function getLocalMediaStream(mediaStream) {
-  recordBtn.disabled = false;
-  const localStream = mediaStream;
-  localVideo.srcObject = mediaStream;
-  window.stream = mediaStream;
+  recordBtn.disabled = false;//レコードボタンを有効にする
+  const localStream = mediaStream;//getLocalMediaStreamで取得した映像をhtml側のvideo要素にする
+  localVideo.srcObject = mediaStream;//html側のvideo要素にする
+  window.stream = mediaStream;//録画用として取得した映像をwindow.streamに設定する
 }
 
-function handleLocalMediaStreamError(error) {
+function handleLocalMediaStreamError(error) {//カメラの取得に失敗したときのエラー処理
   console.log(`navigator.getUserMedia error: ${error}`);
 }
 
@@ -37,7 +37,7 @@ function handleDataAvailable(event) {
 
 function startRecording() {
   recordedBlobs = [];
-  const options = { mimeType: "video/webm;codecs=vp9" };
+  const options = { mimeType: "video/webm;codecs=vp9" };//メディアレコーダーのオプションを設定する
 
   try {
     mediaRecorder = new MediaRecorder(window.stream, options);
@@ -45,44 +45,39 @@ function startRecording() {
     console.log(`Exception while creating MediaRecorder: ${error}`);
     return;
   }
-/*
-  console.log("Created MediaRecorder", mediaRecorder);
-  recordBtn.textContent = "停止";
-  //playBtn.disabled = true;
-  downloadBtn.disabled = true;
-*/
+
   mediaRecorder.onstop = event => {
     console.log("Recorder stopped: ", event);
   };
 
   mediaRecorder.ondataavailable = handleDataAvailable;
   mediaRecorder.start(10);
-  console.log("MediaRecorder started", mediaRecorder);
+  console.log("録画を開始しました", mediaRecorder);
 }
 
 function stopRecording() {
   mediaRecorder.stop();
-  console.log("Recorded media.");
+  console.log("録画が完了しました");
 }
 
-function camon() { //ここnoaddEventListenerを一つのファンクションにして
+function camera_on() { 
   const constraints = {
-    video: {
+    video: {//カメラの解像度を設定
       width: 1280,
       height: 720
     }
   }
 
   navigator.mediaDevices
-    .getUserMedia(constraints)
-    .then(getLocalMediaStream)
-    .then(startRecording)
-    .catch(handleLocalMediaStreamError);
+    .getUserMedia(constraints)//カメラの映像を取得
+    .then(getLocalMediaStream)//取得した後にその取得したビデオをvideo要素にして、それを録画するようにする
+    .then(startRecording)//録画の準備が出来たら録画を開始
+    .catch(handleLocalMediaStreamError);//映像の取得に失敗したらエラー処理を行う
 };
 
 recordBtn.addEventListener("click", () => {
   if (recordBtn.textContent === "録画") {
-    camon();  //ここに呼びだせば行ける
+    camera_on();
     startRecording();
   }
 });
@@ -96,17 +91,6 @@ againBtn.addEventListener("click", () => {
     startRecording();
   }
 });
-
-
-/*playBtn.addEventListener("click", () => {
-  const superBuffer = new Blob(recordedBlobs, { type: "video/webm" });
-  recordedVideo.src = null;
-  recordedVideo.srcObject = null;
-  recordedVideo.src = window.URL.createObjectURL(superBuffer);
-  recordedVideo.controls = true;
-  recordedVideo.play();
-});
-*/
 
 downloadBtn.addEventListener("click", () => {
   const blob = new Blob(recordedBlobs, { type: "video/webm" });
