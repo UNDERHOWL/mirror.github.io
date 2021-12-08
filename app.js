@@ -33,4 +33,4 @@ app.use(express.static(path.join(__dirname, 'public')));
 // その他のリクエストに対する404エラー
 app.use((req, res) => {
   res.sendStatus(404);
-});
+}); 
