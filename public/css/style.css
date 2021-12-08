@@ -105,16 +105,25 @@ text-decoration: none;
 border-radius: 15px;
 }
 
+.notification_calender_dummy {
+    font-size: 1.6em;
+    /*フォントの太さ*/
+    font-weight: 700;
+    /*行間の調節*/
+    line-height: 0.75;
+background: black;
+color: #000000;
+padding: 250px 75px 50px 75px;
+text-decoration: none;
+border-radius: 15px;
+}
+
 .notification_calender {
-display: flex;
+    display: none;
 }
 
-.notification_calender > .notification {
-margin: auto;
-padding-top: 50px;
-}
-
-.notification_calender > .notification > .notification_sentence {
+.notification_calender.notification_calender_block {
+    display: block;
     font-size: 1.6em;
     /*フォントの太さ*/
     font-weight: 700;
@@ -127,27 +136,8 @@ text-decoration: none;
 border-radius: 15px;
 }
 
-.notification_calender_dummy {
-display: flex;
-}
 
-.notification_calender_dummy > .notification_dummy {
-margin: auto;
-padding-top: 250px;
-}
 
-.notification_calender_dummy > .notification_dummy > .notification_sentence_dummy {
-    font-size: 1.6em;
-    /*フォントの太さ*/
-    font-weight: 700;
-    /*行間の調節*/
-    line-height: 0.75;
-background: black;
-color: #000000;
-padding: 250px 75px 50px 75px;
-text-decoration: none;
-border-radius: 15px;
-}
 
 /*通知終了*/
 
